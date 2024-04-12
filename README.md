@@ -19,11 +19,11 @@ The default name is Cora.
 2. **Train embeddings**
 
 
-       python3 generate_embeddings.py 
+       python3 train_smooth_embeddings.py 
 
 Usage:
 
-    generate_embeddings.py [-h] [--graphname [GRAPHNAME]]
+    train_smooth_embeddings.py [-h] [--graphname [GRAPHNAME]]
                                   [--embedding_size EMBEDDING_SIZE]
                                   [--depth DEPTH] [--method [METHOD]]
                                   [--sketchsize SKETCHSIZE]
@@ -31,14 +31,9 @@ Usage:
     
 The default arguments are Cora, embedding size 5, depth 2, default method L2, and sketchsize 1. (See the paper for details.)
 
-3. **Train a linear model**
+3. **Node classification**
 
-    python3 linear_svm_training.py
+    python3 node_classification.py
 
-Train and evaluate a linear SVM model for node classification for a given graph and a given method for embedding generation. The parameters are the same as above, just type the option `--help` for instructions.
+4. **Link prediction**
 
-4. (Optional) *Train a kernel model*
-
-For comparison, one can also train a kernel SVM model with
-    
-    python3 kernel_svm_training.py
